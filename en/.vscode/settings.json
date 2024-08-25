@@ -1,0 +1,19 @@
+  {
+
+      "liveSassCompile.settings.formats": [{
+              "format": "expanded",
+              "extensionName": ".css",
+              "savePath": "~/../css"
+          },
+          {
+              "format": "compressed",
+              "extensionName": ".min.css",
+              "savePath": "~/../css"
+          }
+
+
+    ],
+    "liveServer.settings.port": 5502,
+    "px-to-rem.px-per-rem": 18,
+
+  }

@@ -1,0 +1,43 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 1171275460">
+<g id="Group 1171275457">
+<g id="Ellipse 83" filter="url(#filter0_d_33_203)">
+<path d="M120 75C120 99.8528 99.8528 120 75 120C50.1472 120 30 99.8528 30 75C30 50.1472 50.1472 30 75 30C99.8528 30 120 50.1472 120 75Z" fill="white"/>
+</g>
+<g id="Ellipse 84" filter="url(#filter1_d_33_203)">
+<path d="M107 75C107 92.6731 92.6731 107 75 107C57.3269 107 43 92.6731 43 75C43 57.3269 57.3269 43 75 43C92.6731 43 107 57.3269 107 75Z" fill="white"/>
+</g>
+</g>
+<g id="vuesax/linear/money-tick">
+<path id="Vector" d="M75.0001 78.3333C76.841 78.3333 78.3334 76.8409 78.3334 75C78.3334 73.159 76.841 71.6666 75.0001 71.6666C73.1591 71.6666 71.6667 73.159 71.6667 75C71.6667 76.8409 73.1591 78.3333 75.0001 78.3333Z" stroke="#486AB5" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M83.6667 71.6666V78.3333" stroke="#486AB5" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Group">
+<path id="Vector_3" d="M70.9999 83C70.9999 84 70.7199 84.9466 70.2266 85.7466C69.3066 87.2933 67.6133 88.3333 65.6666 88.3333C63.7199 88.3333 62.0266 87.2933 61.1066 85.7466C60.6132 84.9466 60.3333 84 60.3333 83C60.3333 80.0533 62.7199 77.6666 65.6666 77.6666C68.6133 77.6666 70.9999 80.0533 70.9999 83Z" stroke="#486AB5" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M63.5884 82.9994L64.9084 84.3194L67.7484 81.6927" stroke="#486AB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector_5" d="M61.6667 79.4V71C61.6667 66.3334 64.3334 64.3334 68.3334 64.3334H81.6667C85.6667 64.3334 88.3334 66.3334 88.3334 71V79C88.3334 83.6667 85.6667 85.6667 81.6667 85.6667H70.3334" stroke="#486AB5" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_33_203" x="0" y="0" width="150" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="15"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.00392157 0 0 0 0 0.0705882 0 0 0 0 0.568627 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_33_203"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_33_203" result="shape"/>
+</filter>
+<filter id="filter1_d_33_203" x="13" y="13" width="124" height="124" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="15"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.00392157 0 0 0 0 0.0705882 0 0 0 0 0.568627 0 0 0 0.08 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_33_203"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_33_203" result="shape"/>
+</filter>
+</defs>
+</svg>

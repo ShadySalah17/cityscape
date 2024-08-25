@@ -1,0 +1,19 @@
+<svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Photo">
+<path id="Vector" d="M50.2736 24.967C50.2736 31.6978 47.6084 37.81 43.2792 42.2992C38.7366 47.0082 32.3638 49.9341 25.3066 49.9341C18.2494 49.9341 11.8734 47.0051 7.33398 42.2961C2.99857 37.81 0.336426 31.6978 0.336426 24.967C0.336426 11.1791 11.5156 0 25.3066 0C39.0977 0 50.2736 11.1791 50.2736 24.967Z" fill="#52B3F3"/>
+<mask id="mask0_33_251" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="36" height="36">
+<path id="Vector_2" d="M12.9506 36.8831L12.9501 36.8826C9.96921 33.7981 8.13932 29.5966 8.13932 24.9686C8.13932 15.4888 15.8254 7.80265 25.3075 7.80265C34.7894 7.80265 42.4734 15.4888 42.4734 24.9686C42.4734 29.5964 40.6414 33.7982 37.6644 36.8852C34.5406 40.1235 30.1597 42.1345 25.3075 42.1345C20.4552 42.1345 16.0722 40.1213 12.9506 36.8831Z" fill="white" stroke="black" stroke-width="1.04036"/>
+</mask>
+<g mask="url(#mask0_33_251)">
+<g id="building-4">
+<path id="Vector_3" d="M13.8608 35.3722H36.7487" stroke="white" stroke-width="1.56054" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M33.3989 35.3826V30.7426" stroke="white" stroke-width="1.56054" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M33.4199 23.8138C32.1507 23.8138 31.1311 24.8334 31.1311 26.1026V28.4642C31.1311 29.7335 32.1507 30.753 33.4199 30.753C34.6891 30.753 35.7087 29.7335 35.7087 28.4642V26.1026C35.7087 24.8334 34.6891 23.8138 33.4199 23.8138Z" stroke="white" stroke-width="1.56054" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M15.0059 35.3721V18.7576C15.0059 16.6665 16.0463 15.6157 18.1166 15.6157H24.598C26.6683 15.6157 27.6982 16.6665 27.6982 18.7576V35.3721" stroke="white" stroke-width="1.56054" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_7" d="M18.8547 21.0673H24.0045" stroke="white" stroke-width="1.56054" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_8" d="M18.8547 24.9686H24.0045" stroke="white" stroke-width="1.56054" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_9" d="M21.4038 35.3722V31.4708" stroke="white" stroke-width="1.56054" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>
