@@ -2,7 +2,9 @@
     var swiper = new Swiper(".boxes-slider", {
         slidesPerView: "3",
         spaceBetween: 50,
-        speed: 1500,
+        slidesPerGroup: 4,
+
+        speed: 2000,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
