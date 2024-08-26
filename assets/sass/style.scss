@@ -36,6 +36,15 @@ body {
 }
 
 .section {
+    .image-bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
     .qr,
     .apps {
         margin-bottom: 52px;
@@ -155,7 +164,14 @@ body {
     }
 }
 
+@media all and (display-mode: fullscreen) {
+    .section-2 .slider-box {
+        margin: 85px auto 0 !important;
+    }
+}
+
 .section-2 {
+    .phone,
     .texts {
         visibility: hidden;
     }
@@ -212,7 +228,7 @@ body {
     }
     .slider-box {
         visibility: hidden;
-        max-width: 70%;
+        max-width: 100%;
         margin: 30px auto 0;
         .swiper-wrapper {
             padding: 76px 0;
@@ -593,6 +609,9 @@ body {
     .section-4 .range-sliders1 .mb-5 {
         margin-bottom: 5rem !important;
     }
+    .section-4 .range-sliders2 .mb-5 {
+        margin-bottom: 3rem !important;
+    }
 }
 
 .guide-section {
@@ -698,6 +717,10 @@ button.btn-close {
 }
 
 .fund {
+    display: none;
+    &.show-fund {
+        display: block !important;
+    }
     height: 100vh;
     .fund-title {
         height: 30vh;
@@ -1004,9 +1027,6 @@ button.btn-close {
     animation-duration: 1.5s;
     animation-timing-function: linear;
     animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: none;
 }
 
 @keyframes slide-in-blurred-right {
@@ -1181,15 +1201,6 @@ button.btn-close {
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: none;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 .tilt-in-top-1 {

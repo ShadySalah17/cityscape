@@ -1,10 +1,9 @@
 (function($) {
     var swiper = new Swiper(".boxes-slider", {
-        slidesPerView: "3",
-        spaceBetween: 50,
-        slidesPerGroup: 4,
-
-        speed: 2000,
+        slidesPerView: "5",
+        spaceBetween: 35,
+        slidesPerGroup: 5,
+        speed: 3000,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -12,10 +11,7 @@
     });
 })(jQuery);
 
-
 (function($) {
-
-
     if (document.getElementById("slider1")) {
         var invest = 0;
         var rio = 0;
@@ -81,7 +77,7 @@
                 100000,
             ];
 
-            invest = values2[index];;
+            invest = values2[index];
 
             let final_val = invest * rio * year + invest;
             let final_year = (final_val - invest) / invest;
@@ -206,8 +202,6 @@
 
             $(".item2 h6").text(formattedPercentage + " %");
         });
-
-
     }
     if (document.getElementById("slider4")) {
         /***--------------------------------dddddddddddddddddddd-----------------------------------------------------* */
@@ -286,17 +280,15 @@
             $(".item3 h6").text(final_val);
             $(".invest-value").text(invest2.toLocaleString());
 
-
             let renew = year2 * rio2 * invest2;
             renew = renew / dived;
 
             renew = renew.toLocaleString("en-US", {
                 minimumFractionDigits: 1,
                 maximumFractionDigits: 1,
-            });;
+            });
 
             $(".item5 h6").text(renew);
-
 
             const percentage = (final_year * 100).toLocaleString(undefined, {
                 minimumFractionDigits: 2,
@@ -483,15 +475,9 @@
             $(".month-value").text(label);
         });
     }
-
-
-
-
 })(jQuery);
 
-
 (function($) {
-
     $(".btn-close").click(function(e) {
         e.preventDefault();
 
@@ -509,30 +495,30 @@
     });
 })(jQuery);
 
-
 (function($) {
-
-
     async function addClasses() {
         // Add slit-in-vertical animation to boxes
         await Promise.all([
-            addAnimation(".box-1", "slit-in-vertical", 800),
-            addAnimation(".box-2", "slit-in-vertical", 1600),
-            addAnimation(".box-3", "slit-in-vertical", 2000),
+            addAnimation(".show-fund .box-1", "slit-in-vertical", 800),
+            addAnimation(".show-fund .box-2", "slit-in-vertical", 1600),
+            addAnimation(".show-fund .box-3", "slit-in-vertical", 2000),
         ]);
-
 
         // Add fade-in-top animation to block-items and timeline-block
         await Promise.all([
-            addAnimation(".block-items", "fade-in-top", 1000),
-            addAnimation(".timeline-block", "fade-in-top", 2000),
+            addAnimation(".show-fund .block-items", "fade-in-top", 1000),
+            addAnimation(".show-fund .timeline-block", "fade-in-top", 2000),
         ]);
 
         // Animate timeline
         await animateTimeline();
 
         // Fade in go-home and go-back buttons
-        await addAnimation(".fund .go-home,.fund .go-back", "fade-in", 500);
+        await addAnimation(
+            ".show-fund .go-home,.show-fund .go-back",
+            "fade-in",
+            500
+        );
     }
 
     async function addAnimation(selector, animationClass, delay) {
@@ -545,8 +531,8 @@
     }
 
     async function animateTimeline() {
-        const $timeline = $(".timeline li");
-        const $progressBar = $(".progress-bar");
+        const $timeline = $(".show-fund .timeline li");
+        const $progressBar = $(".show-fund .progress-bar");
         const timelineLength = $timeline.length;
 
         for (let i = 0; i < timelineLength; i++) {
@@ -568,8 +554,37 @@
         }
     }
 
-    addClasses();
+    $(".boxes-slider .box").click(function(e) {
+        e.preventDefault();
+        let target = $(this).data("target");
 
+        $(".fund,.section-2").hide();
+        $("[data-box='" + target + "']").addClass("show-fund");
+
+        addClasses();
+    });
+
+    $(".fund .go-back").click(function(e) {
+        e.preventDefault();
+
+        $(".show-fund .box-1").removeClass("slit-in-vertical");
+        $(".show-fund .box-2").removeClass("slit-in-vertical");
+        $(".show-fund .box-3").removeClass("slit-in-vertical");
+        $(".show-fund .block-items").removeClass("fade-in-top");
+        $(".show-fund .timeline-block").removeClass("fade-in-top");
+        $(".fund .fund-details .timeline ul li:not(.step-start):not(.step-end)").hide();
+        $(".show-fund .progress-bar").css("width", 0);
+        $(".fund .fund-details .timeline ul li div").removeClass("text-focus-in");
+        $(".fund").removeClass("show-fund").hide();
+        $(".section-2").show();
+
+        $(".section-2 .texts ,.section-2 .qr ,.section-2 .apps  ").css(
+            "animation-duration",
+            "0s"
+        );
+
+
+    });
 
     homeAni();
     guideAni();
@@ -579,9 +594,7 @@
     async function homeAni() {
         await new Promise((resolve) => {
             setTimeout(() => {
-                $(".home-page .text ,.home-page h1").addClass(
-                    "focus-in-expand"
-                );
+                $(".home-page .text ,.home-page h1").addClass("focus-in-expand");
                 resolve();
             }, 120);
         });
@@ -615,22 +628,19 @@
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".home-page .qr").addClass("slide-in-blurred-right");
-                $(".home-page .apps").addClass(
-                    "slide-in-blurred-left"
-                );
+                $(".home-page .apps").addClass("slide-in-blurred-left");
 
                 resolve();
             }, 0);
         });
-
-
     }
-
 
     async function guideAni() {
         await new Promise((resolve) => {
             setTimeout(() => {
-                $(".guide-section .text ,.guide-section h1").addClass("focus-in-expand");
+                $(".guide-section .text ,.guide-section h1").addClass(
+                    "focus-in-expand"
+                );
 
                 resolve();
             }, 120);
@@ -638,7 +648,6 @@
 
         await new Promise((resolve) => {
             setTimeout(() => {
-
                 $(".guide-section .box1").addClass("fade-in");
                 resolve();
             }, 350);
@@ -685,9 +694,8 @@
         });
     }
 
-
-
     async function FundsAni() {
+
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".section-2 .text ,.section-2 h1").addClass("focus-in-expand");
@@ -698,10 +706,11 @@
 
         await new Promise((resolve) => {
             setTimeout(() => {
-                $(".section-2 .texts ").addClass("focus-in-expand");
+                $(".section-2 .texts").addClass("focus-in-expand");
                 resolve();
             }, 50);
         });
+
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".section-2 .box1").addClass("fade-in");
@@ -752,6 +761,7 @@
             setTimeout(() => {
                 $(".section-2 .qr").addClass("slide-in-blurred-right");
                 $(".section-2 .apps").addClass("slide-in-blurred-left");
+                $(".section-2 .phone").addClass("fade-in");
 
                 resolve();
             }, 0);
@@ -770,9 +780,7 @@
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".section-3 .box1").addClass("slide-in-bck-right");
-                $(".section-3 .box2").addClass(
-                    "slide-in-bck-left"
-                );
+                $(".section-3 .box2").addClass("slide-in-bck-left");
 
                 resolve();
             }, 350);
@@ -788,9 +796,7 @@
         });
     }
 
-
     async function calcT1() {
-
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".section-4 .text ,.section-4 h1").addClass("focus-in-expand");
@@ -826,16 +832,7 @@
             }, 0);
         });
     }
-
 })(jQuery);
-
-
-
-
-
-
-
-
 
 function formatNumber(num) {
     if (num % 1 === 0) {

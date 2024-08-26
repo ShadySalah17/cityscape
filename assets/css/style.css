@@ -39,6 +39,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.section .image-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
 .section .qr,
 .section .apps {
   margin-bottom: 52px;
@@ -144,6 +153,12 @@ body {
     width: 60vh;
   }
 }
+@media all and (display-mode: fullscreen) {
+  .section-2 .slider-box {
+    margin: 85px auto 0 !important;
+  }
+}
+.section-2 .phone,
 .section-2 .texts {
   visibility: hidden;
 }
@@ -200,7 +215,7 @@ body {
 }
 .section-2 .slider-box {
   visibility: hidden;
-  max-width: 70%;
+  max-width: 100%;
   margin: 30px auto 0;
 }
 .section-2 .slider-box .swiper-wrapper {
@@ -576,6 +591,9 @@ body {
   .section-4 .range-sliders1 .mb-5 {
     margin-bottom: 5rem !important;
   }
+  .section-4 .range-sliders2 .mb-5 {
+    margin-bottom: 3rem !important;
+  }
 }
 .guide-section .boxes {
   max-width: 80%;
@@ -675,7 +693,11 @@ button.btn-close {
   }
 }
 .fund {
+  display: none;
   height: 100vh;
+}
+.fund.show-fund {
+  display: block !important;
 }
 .fund .fund-title {
   height: 30vh;
@@ -969,9 +991,6 @@ button.btn-close {
   animation-duration: 1.5s;
   animation-timing-function: linear;
   animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
 }
 
 @keyframes slide-in-blurred-right {
@@ -1140,14 +1159,6 @@ button.btn-close {
   animation-fill-mode: none;
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .tilt-in-top-1 {
   animation-name: tilt-in-top-1;
   animation-duration: 1s;
