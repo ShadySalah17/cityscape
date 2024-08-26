@@ -42,7 +42,11 @@ body {
         visibility: hidden;
     }
     height: 100vh;
-    background-image: url('../images/bg.jpg');
+    background: linear-gradient(275.01deg,
+    #05128B 0.06%,
+    #2B64F5 105.54%,
+    #5CAEFF 136.9%);
+    background-blend-mode: hard-light;
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -743,7 +747,7 @@ button.btn-close {
             justify-content: center;
             gap: 20px;
             .box {
-                display: none;
+                visibility: hidden;
                 background-color: white;
                 box-shadow: 0px 0px 27.08px 0px #0112910D;
                 border-radius: 27.08px;
@@ -1211,7 +1215,6 @@ button.btn-close {
 
 .slit-in-vertical {
     visibility: visible !important;
-    display: block !important;
     animation-name: slit-in-vertical;
     animation-duration: 1s;
     animation-timing-function: linear;

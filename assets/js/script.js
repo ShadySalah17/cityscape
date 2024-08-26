@@ -81,13 +81,15 @@
                 100000,
             ];
 
-            invest = values2[index];
+            invest = values2[index];;
 
             let final_val = invest * rio * year + invest;
             let final_year = (final_val - invest) / invest;
 
             final_val = final_val.toLocaleString();
             $(".item1 h6").text(final_val);
+
+            $(".invest-value").text(invest.toLocaleString());
 
             const percentage = (final_year * 100).toLocaleString(undefined, {
                 minimumFractionDigits: 2,
@@ -140,6 +142,8 @@
             final_val = final_val.toLocaleString();
             $(".item1 h6").text(final_val);
 
+            $(".income-value").text(label);
+
             const percentage = (final_year * 100).toLocaleString(undefined, {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
@@ -191,6 +195,7 @@
 
             final_val = final_val.toLocaleString();
             $(".item1 h6").text(final_val);
+            $(".time-value").text(label);
 
             const percentage = (final_year * 100).toLocaleString(undefined, {
                 minimumFractionDigits: 2,
@@ -211,7 +216,7 @@
         var rio2 = 0;
         var year2 = 0;
         var month = 0;
-
+        var dived = 0;
         const slider4 = document.getElementById("slider4");
         const labels4 = [
             " ",
@@ -279,6 +284,19 @@
             let final_year = (final_val - invest2) / invest2;
             final_val = final_val.toLocaleString();
             $(".item3 h6").text(final_val);
+            $(".invest-value").text(invest2.toLocaleString());
+
+
+            let renew = year2 * rio2 * invest2;
+            renew = renew / dived;
+
+            renew = renew.toLocaleString("en-US", {
+                minimumFractionDigits: 1,
+                maximumFractionDigits: 1,
+            });;
+
+            $(".item5 h6").text(renew);
+
 
             const percentage = (final_year * 100).toLocaleString(undefined, {
                 minimumFractionDigits: 2,
@@ -329,6 +347,16 @@
             let final_year = (final_val - invest2) / invest2;
             final_val = final_val.toLocaleString();
             $(".item3 h6").text(final_val);
+            $(".income-value").text(label);
+
+            let renew = year2 * rio2 * invest2;
+            renew = renew / dived;
+
+            renew = renew.toLocaleString("en-US", {
+                minimumFractionDigits: 1,
+                maximumFractionDigits: 1,
+            });
+            $(".item5 h6").text(renew);
 
             const percentage = (final_year * 100).toLocaleString(undefined, {
                 minimumFractionDigits: 2,
@@ -383,6 +411,16 @@
             let final_year = (final_val - invest2) / invest2;
             final_val = final_val.toLocaleString();
             $(".item3 h6").text(final_val);
+            $(".time-value").text(label);
+
+            let renew = year2 * rio2 * invest2;
+            renew = renew / dived;
+
+            renew = renew.toLocaleString("en-US", {
+                minimumFractionDigits: 1,
+                maximumFractionDigits: 1,
+            });
+            $(".item5 h6").text(renew);
 
             const percentage = (final_year * 100).toLocaleString(undefined, {
                 minimumFractionDigits: 2,
@@ -399,7 +437,7 @@
         /*--------------------------------------------------------------------*/
 
         const slider8 = document.getElementById("slider8");
-        const labels8 = ["", "شهري", "ربع سنوي", "نصف سنوي ", "  سنوي ", ""];
+        const labels8 = ["", "شهري", "ربع سنوي", "نصف سنوي ", "سنوي ", ""];
         noUiSlider.create(slider8, {
             start: [1], // Initial index of the labels8 array
             connect: "lower",
@@ -423,29 +461,26 @@
             step: 1, // Set the step value to 1
         });
 
-        slider7.noUiSlider.on("update", function(values) {
+        slider8.noUiSlider.on("update", function(values) {
             // Get the selected label
             const index = Math.round(values[0]);
             const label = labels8[index];
 
             // Get the corresponding value
-            const values2 = ["", 1, 2, 3, 4];
+            const values2 = ["", 12, 4, 2, 1];
 
-            year2 = values2[index];
+            dived = values2[index];
 
-            let final_val = invest2 + year2 * rio2 * invest2;
-            let final_year = (final_val - invest2) / invest2;
-            final_val = final_val.toLocaleString();
-            $(".item3 h6").text(final_val);
+            let renew = year2 * rio2 * invest2;
+            renew = renew / dived;
 
-            const percentage = (final_year * 100).toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
+            renew = renew.toLocaleString("en-US", {
+                minimumFractionDigits: 1,
+                maximumFractionDigits: 1,
             });
 
-            const formattedPercentage = parseFloat(percentage).toString();
-
-            $(".item4 h6").text(formattedPercentage + " %");
+            $(".item5 h6").text(renew);
+            $(".month-value").text(label);
         });
     }
 
@@ -769,8 +804,8 @@
                 $(".section-4 .item1").addClass("slit-in-vertical");
                 $(".section-4 .item2").addClass("slit-in-vertical");
 
-                $(".section-4 .item3").addClass("slit-in-vertical");
-                $(".section-4 .item4").addClass("slit-in-vertical");
+                $(".section-4 .results>div").addClass("slit-in-vertical");
+
                 resolve();
             }, 350);
         });
