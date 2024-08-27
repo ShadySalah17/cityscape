@@ -772,6 +772,7 @@ button.btn-close {
 }
 .fund .fund-details .boxes .box .counterr.c-f {
   font-size: 28.98px;
+  line-height: inherit;
 }
 .fund .fund-details .boxes .box .currency {
   font-size: 15.18px;
@@ -794,6 +795,9 @@ button.btn-close {
   box-shadow: 0px 0px 27.11px 0px rgba(1, 18, 145, 0.0509803922);
   border: 1px solid rgba(255, 255, 255, 0.1803921569);
 }
+.fund .fund-details .items .item {
+  text-align: center;
+}
 .fund .fund-details .items h5 {
   font-size: 19.83px;
   font-weight: 400;
@@ -814,7 +818,7 @@ button.btn-close {
   margin: auto;
   border-radius: 30px;
   background: linear-gradient(100.42deg, rgba(255, 255, 255, 0.018) 16.09%, rgba(255, 255, 255, 0.09) 105.27%);
-  padding: 35px 50px 20px;
+  padding: 60px 50px 20px;
   box-shadow: 0px 0px 27.11px 0px rgba(1, 18, 145, 0.0509803922);
   border: 1px solid rgba(255, 255, 255, 0.1803921569);
   min-height: 176px;
@@ -843,10 +847,12 @@ button.btn-close {
 .fund .fund-details .timeline ul li span {
   position: absolute;
   right: 160px;
-  top: 24px;
+  top: 17px;
+  font-size: 14px;
 }
 .fund .fund-details .timeline ul li span div {
   min-width: max-content;
+  text-align: center;
 }
 .fund .fund-details .timeline ul li span:after {
   content: "";
@@ -854,7 +860,7 @@ button.btn-close {
   position: absolute;
   width: 20px;
   height: 20px;
-  bottom: 43px;
+  bottom: 53px;
   z-index: 1;
   right: 0;
   left: 0;
@@ -875,6 +881,7 @@ button.btn-close {
 .fund .fund-details .timeline ul li.step-last span::after {
   height: 35px;
   width: 35px;
+  bottom: 41px;
   background-size: contain;
 }
 .fund .fund-details .timeline ul li.step-end {
@@ -891,10 +898,24 @@ button.btn-close {
   display: none;
 }
 .fund .fund-details .timeline ul li.top span {
-  top: -45px;
+  top: -66px;
+  font-size: 14px;
 }
 .fund .fund-details .timeline ul li.top span:after {
-  bottom: -28px;
+  bottom: -30px;
+}
+.fund .fund-details .timeline.has-long {
+  padding-top: 90px;
+}
+.fund .fund-details .timeline.has-long li.top span {
+  top: -95px;
+  font-size: 12px;
+}
+.fund .fund-details .timeline.has-long li.top span:after {
+  bottom: -30px;
+}
+.fund .fund-details .timeline.has-long li.two-line.top span {
+  top: -60px !important;
 }
 .fund .fund-details .timeline-block {
   visibility: hidden;

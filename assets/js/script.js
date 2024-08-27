@@ -553,10 +553,13 @@
             }
         }
     }
+    $(".fund").removeClass("show-fund");
 
     $(".boxes-slider .box").click(function(e) {
         e.preventDefault();
         let target = $(this).data("target");
+
+        $(".fund").removeClass("show-fund");
 
         $(".fund,.section-2").hide();
         $("[data-box='" + target + "']").addClass("show-fund");
@@ -575,7 +578,8 @@
         $(".fund .fund-details .timeline ul li:not(.step-start):not(.step-end)").hide();
         $(".show-fund .progress-bar").css("width", 0);
         $(".fund .fund-details .timeline ul li div").removeClass("text-focus-in");
-        $(".fund").removeClass("show-fund").hide();
+        $(".fund").removeClass("show-fund")
+        $(".fund").hide();
         $(".section-2").show();
 
         $(".section-2 .texts ,.section-2 .qr ,.section-2 .apps  ").css(
