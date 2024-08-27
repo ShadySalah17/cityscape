@@ -748,6 +748,12 @@ button.btn-close {
   justify-content: center;
   gap: 20px;
 }
+.fund .fund-details .boxes.column-2 {
+  display: flex !important;
+}
+.fund .fund-details .boxes.column-2 .box {
+  width: 33%;
+}
 .fund .fund-details .boxes .box {
   visibility: hidden;
   background-color: white;
@@ -826,6 +832,12 @@ button.btn-close {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+.fund .fund-details .timeline h5 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 17.62px;
+  color: #F4F9FF;
 }
 .fund .fund-details .timeline .progress {
   width: 100%;

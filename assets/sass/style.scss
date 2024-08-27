@@ -769,6 +769,12 @@ button.btn-close {
             grid-template-columns: repeat(3, 1fr);
             justify-content: center;
             gap: 20px;
+            &.column-2 {
+                display: flex !important;
+                .box {
+                    width: 33%;
+                }
+            }
             .box {
                 visibility: hidden;
                 background-color: white;
@@ -859,6 +865,12 @@ button.btn-close {
             align-items: center;
             flex-direction: column;
             justify-content: center;
+            h5 {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 17.62px;
+                color: #F4F9FF;
+            }
             .progress {
                 width: 100%;
                 position: relative;
