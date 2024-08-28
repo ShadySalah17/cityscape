@@ -105,6 +105,9 @@ body {
   background: #0366FF;
 }
 
+.section-1 .text {
+  margin-right: -46px;
+}
 .section-1 h3 {
   font-size: 34.39px;
   font-weight: 400;
@@ -117,6 +120,7 @@ body {
   line-height: 95.01px;
   text-align: center;
   margin-bottom: 20px;
+  margin-right: -40px;
 }
 .section-1 .phone {
   visibility: hidden;
@@ -375,7 +379,7 @@ body {
 .section-4 h6 {
   font-family: Expo Arabic;
   font-size: 26.23px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 27.54px;
   text-align: center;
 }
