@@ -37,9 +37,13 @@ body {
   font-size: 17px;
   transition: all 0.4s ease;
   max-width: max-content;
-  position: absolute;
+  position: fixed;
   left: 51px;
+  top: 50px;
   z-index: 999;
+}
+.lang a.scrolled {
+  background: #0366FF;
 }
 .lang a:hover {
   background: #0366FF;
