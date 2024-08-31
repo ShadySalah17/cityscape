@@ -24,12 +24,13 @@
             "100 ألف",
             "200 ألف",
             "300 ألف",
+            "400 ألف",
             "500 ألف",
+            "600 ألف",
             "700 ألف",
+            "800 ألف",
             "900 ألف",
             "1 مليون",
-            "90K",
-            "100K",
             "",
         ];
         noUiSlider.create(slider1, {
@@ -45,7 +46,7 @@
             padding: 1,
             pips: {
                 mode: "values",
-                values: [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], // Use indices instead of actual values
+                values: [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], // Use indices instead of actual values
                 density: 100,
                 format: {
                     to: function(value) {
@@ -64,17 +65,18 @@
 
             const values2 = [
                 "",
-                1000,
                 10000,
-                20000,
-                30000,
-                40000,
                 50000,
-                60000,
-                70000,
-                80000,
-                90000,
                 100000,
+                200000,
+                300000,
+                400000,
+                500000,
+                600000,
+                700000,
+                800000,
+                900000,
+                1000000
             ];
 
             invest = values2[index];
@@ -210,22 +212,24 @@
         var rio2 = 0;
         var year2 = 0;
         var month = 0;
-        var dived = 0;
+        var dived = 12;
         const slider4 = document.getElementById("slider4");
         const labels4 = [
             " ",
-            "1K",
-            "10K",
-            "20K",
-            "30K",
-            "40K",
-            "50K",
-            "60K",
-            "70K",
-            "80K",
-            "90K",
-            "100K",
-            "",
+            "10 آلاف",
+            "50 ألف",
+            "100 ألف",
+            "200 ألف",
+            "300 ألف",
+            "400 ألف",
+            "500 ألف",
+            "600 ألف",
+            "700 ألف",
+            "800 ألف",
+            "900 ألف",
+            "1 مليون",
+            ""
+
         ];
         noUiSlider.create(slider4, {
             start: [3], // Initial index of the labels4 array
@@ -240,7 +244,7 @@
             padding: 1,
             pips: {
                 mode: "values",
-                values: [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], // Use indices instead of actual values
+                values: [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], // Use indices instead of actual values
                 density: 100,
                 format: {
                     to: function(value) {
@@ -259,17 +263,18 @@
 
             const values2 = [
                 "",
-                1000,
                 10000,
-                20000,
-                30000,
-                40000,
                 50000,
-                60000,
-                70000,
-                80000,
-                90000,
                 100000,
+                200000,
+                300000,
+                400000,
+                500000,
+                600000,
+                700000,
+                800000,
+                900000,
+                1000000
             ];
 
             invest2 = values2[index];
@@ -281,7 +286,7 @@
             $(".invest-value").text(invest2.toLocaleString());
 
             let renew = year2 * rio2 * invest2;
-            renew = renew / dived;
+            renew = renew / (dived * year2);
 
             renew = renew.toLocaleString("en-US", {
                 minimumFractionDigits: 1,
@@ -342,7 +347,7 @@
             $(".income-value").text(label);
 
             let renew = year2 * rio2 * invest2;
-            renew = renew / dived;
+            renew = renew / (dived * year2);
 
             renew = renew.toLocaleString("en-US", {
                 minimumFractionDigits: 1,
@@ -405,8 +410,13 @@
             $(".item3 h6").text(final_val);
             $(".time-value").text(label);
 
+
+
             let renew = year2 * rio2 * invest2;
-            renew = renew / dived;
+            console.log(renew)
+            renew = renew / (dived * year2);
+
+
 
             renew = renew.toLocaleString("en-US", {
                 minimumFractionDigits: 1,
@@ -464,7 +474,7 @@
             dived = values2[index];
 
             let renew = year2 * rio2 * invest2;
-            renew = renew / dived;
+            renew = renew / (dived * year2);
 
             renew = renew.toLocaleString("en-US", {
                 minimumFractionDigits: 1,
