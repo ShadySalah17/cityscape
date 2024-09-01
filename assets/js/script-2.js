@@ -4,6 +4,11 @@
         spaceBetween: 35,
         slidesPerGroup: 5,
         speed: 3000,
+        touchRatio: 0.8,
+
+        autoplayDisableOnInteraction: false,
+        grabCursor: true,
+        simulateTouch: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -715,52 +720,52 @@
                 $(".section-2 .text ,.section-2 h1").addClass("focus-in-expand");
 
                 resolve();
-            }, 120);
+            }, 50);
         });
 
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".section-2 .texts").addClass("focus-in-expand");
                 resolve();
-            }, 50);
+            }, 10);
         });
 
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".section-2 .box1").addClass("fade-in");
                 if (document.getElementById("counter1")) {
-                    animateCounter("counter1", 24, 2000);
+                    animateCounter("counter1", 24, 1500);
                 }
                 resolve();
-            }, 350);
+            }, 50);
         });
 
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".section-2 .box2").addClass("fade-in");
                 if (document.getElementById("counter1")) {
-                    animateCounter("counter2", 5.7, 3000);
+                    animateCounter("counter2", 5.7, 2500);
                 }
                 resolve();
-            }, 350);
+            }, 50);
         });
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".section-2 .box3").addClass("fade-in");
                 if (document.getElementById("counter1")) {
-                    animateCounter("counter3", 2.1, 3000);
+                    animateCounter("counter3", 2.1, 2500);
                 }
                 resolve();
-            }, 350);
+            }, 50);
         });
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".section-2 .box4").addClass("fade-in");
                 if (document.getElementById("counter1")) {
-                    animateCounter("counter4", 16, 2000);
+                    animateCounter("counter4", 16, 1500);
                 }
                 resolve();
-            }, 350);
+            }, 50);
         });
 
         await new Promise((resolve) => {
@@ -768,7 +773,7 @@
                 $(".section-2 .slider-box").addClass("fade-in");
 
                 resolve();
-            }, 350);
+            }, 10);
         });
 
         await new Promise((resolve) => {
