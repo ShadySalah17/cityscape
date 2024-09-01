@@ -26,29 +26,38 @@ body {
     height: 100%;
 }
 
-.lang a {
-    border-radius: 50px;
-    background: linear-gradient(100.42deg, rgba(255, 255, 255, 0.018) 16.09%, rgba(255, 255, 255, 0.09) 105.27%);
-    padding: 13px 15px 7px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1803921569);
-    color: white;
-    font-size: 17px;
-    transition: all 0.4s ease;
-    max-width: max-content;
-    position: fixed;
-    left: 51px;
-    top: 50px;
-    z-index: 999;
-    &.scrolled {
-        background: #0366FF;
+.lang,
+.lang-2 {
+    a {
+        border-radius: 50px;
+        background: linear-gradient(100.42deg, rgba(255, 255, 255, 0.018) 16.09%, rgba(255, 255, 255, 0.09) 105.27%);
+        padding: 13px 15px 7px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1803921569);
+        color: white;
+        font-size: 17px;
+        transition: all 0.4s ease;
+        max-width: max-content;
+        position: fixed;
+        left: 51px;
+        top: 50px;
+        z-index: 999;
+        &.scrolled {
+            background: #0366FF;
+        }
+        &:hover {
+            background: #0366FF;
+        }
     }
-    &:hover {
-        background: #0366FF;
-    }
+}
+
+.lang-2 a {
+    left: auto;
+    right: 51px;
+    padding: 7px 15px 7px;
 }
 
 .main-slider.swiper {

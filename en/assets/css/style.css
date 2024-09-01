@@ -24,7 +24,8 @@ body {
   height: 100%;
 }
 
-.lang a {
+.lang a,
+.lang-2 a {
   border-radius: 50px;
   background: linear-gradient(100.42deg, rgba(255, 255, 255, 0.018) 16.09%, rgba(255, 255, 255, 0.09) 105.27%);
   padding: 13px 15px 7px;
@@ -42,11 +43,19 @@ body {
   top: 50px;
   z-index: 999;
 }
-.lang a.scrolled {
+.lang a.scrolled,
+.lang-2 a.scrolled {
   background: #0366FF;
 }
-.lang a:hover {
+.lang a:hover,
+.lang-2 a:hover {
   background: #0366FF;
+}
+
+.lang-2 a {
+  left: auto;
+  right: 51px;
+  padding: 7px 15px 7px;
 }
 
 .main-slider.swiper {

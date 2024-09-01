@@ -45,20 +45,21 @@ if (document.querySelector(".main-slider")) {
         on: {
             slideChange: function() {
                 let index = this.activeIndex;
-                var header = document.querySelector(".lang a");
+                var header = document.querySelectorAll(".lang a");
 
-                if (index > 0) {
-                    header.classList.add("scrolled");
-                } else {
-                    header.classList.remove("scrolled");
-                }
-                if (index == 4) {
-                    animateCounter("counter1", 24, 2000);
-                    animateCounter("counter2", 5.7, 3000);
-                    animateCounter("counter3", 2.1, 3000);
-                    animateCounter("counter4", 16, 2000);
-                }
-
+                header.forEach((element) => {
+                    if (index > 0) {
+                        element.classList.add("scrolled");
+                    } else {
+                        element.classList.remove("scrolled");
+                    }
+                    if (index == 4) {
+                        animateCounter("counter1", 24, 2000);
+                        animateCounter("counter2", 5.7, 3000);
+                        animateCounter("counter3", 2.1, 3000);
+                        animateCounter("counter4", 16, 2000);
+                    }
+                });
             },
         },
     });
