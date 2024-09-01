@@ -4,7 +4,7 @@
         spaceBetween: 35,
         slidesPerGroup: 5,
         speed: 3000,
-        touchRatio: 0.8,
+        touchRatio: 0.7,
 
         autoplayDisableOnInteraction: false,
         grabCursor: true,
@@ -519,6 +519,12 @@
             addAnimation(".show-fund .box-3", "slit-in-vertical", 2000),
         ]);
 
+        // Fade in go-home and go-back buttons
+        await addAnimation(
+            ".show-fund .go-home,.show-fund .go-back",
+            "fade-in",
+            0
+        );
         // Add fade-in-top animation to block-items and timeline-block
         await Promise.all([
             addAnimation(".show-fund .block-items", "fade-in-top", 1000),
@@ -527,13 +533,6 @@
 
         // Animate timeline
         await animateTimeline();
-
-        // Fade in go-home and go-back buttons
-        await addAnimation(
-            ".show-fund .go-home,.show-fund .go-back",
-            "fade-in",
-            500
-        );
     }
 
     async function addAnimation(selector, animationClass, delay) {
@@ -734,7 +733,7 @@
             setTimeout(() => {
                 $(".section-2 .box1").addClass("fade-in");
                 if (document.getElementById("counter1")) {
-                    animateCounter("counter1", 24, 1500);
+                    animateCounter(24, "counter1", 25, 100);
                 }
                 resolve();
             }, 50);
@@ -744,7 +743,7 @@
             setTimeout(() => {
                 $(".section-2 .box2").addClass("fade-in");
                 if (document.getElementById("counter1")) {
-                    animateCounter("counter2", 5.7, 2500);
+                    animateCounter(5, "counter2", 5.9, 100);
                 }
                 resolve();
             }, 50);
@@ -753,7 +752,7 @@
             setTimeout(() => {
                 $(".section-2 .box3").addClass("fade-in");
                 if (document.getElementById("counter1")) {
-                    animateCounter("counter3", 2.1, 2500);
+                    animateCounter(2, "counter3", 2.3, 100);
                 }
                 resolve();
             }, 50);
@@ -762,7 +761,7 @@
             setTimeout(() => {
                 $(".section-2 .box4").addClass("fade-in");
                 if (document.getElementById("counter1")) {
-                    animateCounter("counter4", 16, 1500);
+                    animateCounter(15, "counter4", 16, 100);
                 }
                 resolve();
             }, 50);
@@ -861,13 +860,13 @@ function formatNumber(num) {
     }
 }
 
-function animateCounter(id, target, duration) {
+function animateCounter(start = 0, id, target, duration) {
     const element = document.getElementById(id);
-    const start = 0;
+
     const end = target;
     const range = end - start;
     let currentTime = 0;
-    const increment = 20;
+    const increment = 1;
     const step = range / (duration / increment);
 
     function count() {
