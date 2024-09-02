@@ -619,32 +619,37 @@
             setTimeout(() => {
                 $(".home-page .box1").addClass("fade-in");
                 resolve();
-            }, 350);
+            }, 200);
         });
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".home-page .box2").addClass("fade-in");
                 resolve();
-            }, 350);
+            }, 200);
         });
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".home-page .box3").addClass("fade-in");
                 resolve();
-            }, 350);
+            }, 200);
         });
 
         await new Promise((resolve) => {
             setTimeout(() => {
                 $(".home-page .phone").addClass("fade-in-bottom");
+                $(".home-page .qr").addClass(
+                    "slide-in-blurred-right"
+                );
+                $(".home-page .apps").addClass(
+                    "slide-in-blurred-left"
+                );
                 resolve();
-            }, 400);
+            }, 250);
         });
 
         await new Promise((resolve) => {
             setTimeout(() => {
-                $(".home-page .qr").addClass("slide-in-blurred-right");
-                $(".home-page .apps").addClass("slide-in-blurred-left");
+
 
                 resolve();
             }, 0);
