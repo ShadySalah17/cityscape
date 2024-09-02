@@ -734,15 +734,9 @@ button.btn-close {
 }
 .fund .fund-details .go-home {
   max-width: max-content;
-  position: absolute;
-  right: 50px;
-  top: 50px;
 }
 .fund .fund-details .go-back {
   max-width: max-content;
-  position: absolute;
-  left: 50px;
-  top: 50px;
 }
 .fund .fund-details .boxes {
   max-width: 80%;
@@ -1359,4 +1353,19 @@ button.btn-close {
   100% {
     transform: scale(1);
   }
+}
+.right-aps {
+  position: absolute;
+  right: 50px;
+  top: 33px;
+  display: flex;
+  gap: 11px;
+}
+
+.left-aps {
+  position: absolute;
+  left: 50px;
+  top: 33px;
+  display: flex;
+  gap: 11px;
 }/*# sourceMappingURL=style.css.map */

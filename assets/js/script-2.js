@@ -4,10 +4,8 @@
         spaceBetween: 35,
         slidesPerGroup: 5,
         speed: 3000,
-        touchRatio: 0.7,
-
-        autoplayDisableOnInteraction: false,
-        grabCursor: true,
+        touchRatio: 1,
+        allowTouchMove: true,
         simulateTouch: true,
         navigation: {
             nextEl: ".swiper-button-next",
