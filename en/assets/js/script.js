@@ -54,9 +54,9 @@ if (document.querySelector(".main-slider")) {
                         element.classList.remove("scrolled");
                     }
                     if (index == 4) {
-                        animateCounter("counter1", 24, 2000);
-                        animateCounter("counter2", 5.7, 3000);
-                        animateCounter("counter3", 2.1, 3000);
+                        animateCounter("counter1", 25, 2000);
+                        animateCounter("counter2", 5.9, 3000);
+                        animateCounter("counter3", 2.3, 3000);
                         animateCounter("counter4", 16, 2000);
                     }
                 });
